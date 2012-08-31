@@ -1,0 +1,285 @@
+// Color variables //
+$aqua: #59c6e5;
+$grey: #434444;
+$lt_blue: #e1f3fc;
+$red: #e40b40;
+
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('font/League_Gothic-webfont.eot');
+    src: url('font/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/League_Gothic-webfont.woff') format('woff'),
+         url('font/League_Gothic-webfont.ttf') format('truetype'),
+         url('font/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	border-top: 5px solid $red;
+	color: $grey;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	margin: 0;
+}
+
+header {
+	display: block;
+	background: url('../img/my_logo.jpg') no-repeat;
+	background-position-x: 50%;
+	background-position-y: 13%;
+	height: 370px;
+	line-height: 2.5em;
+	margin: 0 auto;
+	padding: 200px 0 0 0;
+	text-align: center;
+	width: 1000px;
+
+	p.name {
+		color: $grey;
+		font-family: 'LeagueGothicRegular';
+		font-size: 3.5em;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	p.title {
+		color: $red;
+		font-family: 'LeagueGothicRegular';
+		font-size: 2em;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	.mission {
+		border-bottom: 2px solid $lt_blue;
+		border-top: 2px solid $lt_blue;
+		margin-top: 50px;
+	}
+
+	#nav {
+
+		ul {
+			display: inline;
+			list-style: none;
+			text-align: left;
+
+			li {
+				float: left;
+				height: 100px;
+				margin-right: 60px;
+				margin-top: 50px;
+				width: 200px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				a.show {
+					color: $red;
+					cursor: pointer;
+					font-family: 'LeagueGothicRegular';
+					font-size: 40px;
+					margin-bottom: 0;
+					text-transform: uppercase;
+				}
+
+				p.desc {
+					line-height: 1.5em;
+					margin: 0;
+					padding: 0;
+					width: 150px;
+				}
+			}
+		}
+	}
+
+	.footer {
+		float: left;
+		margin: 60px 0 20px 0;
+		text-align: center;
+		width: 1000px;
+
+		small {
+			color: #ccc;
+		}
+	}
+}
+
+#container {
+	background-color: $lt_blue;
+
+	.content {
+		display: none;
+
+		.wrap {
+			margin: 0 auto;
+			overflow: auto;
+			padding: 50px 0 20px 0;
+			position: relative;
+			width: 1000px;
+
+			.school {
+				float: left;
+				width: 460px;
+			}
+
+			.latest {
+				background-color: #fff;
+				border-radius: 10px;
+				float: right;
+				margin-top: 7px;
+				padding: 20px 30px;
+				width: 420px;
+
+				ul {
+					display: inline;
+					list-style: none;
+					padding: 0;
+
+					li {
+						margin-bottom: 14px;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+
+						img {
+							float: left;
+							margin-right: 30px;
+							margin-bottom: 30px;
+							padding-top: 16px;
+						}
+
+						h5.proj_title {
+							margin: 0;
+
+							a {
+								color: $grey;
+								text-decoration: none;
+							}
+
+							span {
+								color: $red;
+								font-size: 10px;
+								font-style: italic;
+							}
+						}
+
+						p.proj_desc {
+							display: block;
+							font-size: smaller;
+							line-height: 20px;
+							padding: 6px 0;
+						}
+					}
+				}
+			}
+		}
+
+		.clear {
+			clear: both;
+		}
+
+		.quarters {
+			background-color: #fff;
+			border-bottom: 2px solid #ccc;
+			border-radius: 10px;
+			margin-top: 50px;
+			overflow: auto;
+			position: relative;
+
+			.mg_left {
+				margin-left: 50px;
+			}
+
+			ul {
+				border-bottom: 2px solid $lt_blue;
+				margin: 0 auto;
+				overflow: hidden;
+				padding: 0;
+				width: 900px;
+
+				li {
+					float: left;
+					list-style: none;
+					margin-right: 62px;
+					padding: 0;
+					width: 130px;
+
+					a {
+						color: $grey;
+						position: relative;
+
+						&.selected {
+							h2 {
+								color: #ccc;
+							}
+
+							p {
+								color: #ccc;
+							}
+						}
+
+						h2 {
+							color: $red;
+							float: left;
+							font-family: 'LeagueGothicRegular';
+							font-size: 2em;
+							margin: 0;
+							padding: 0;
+							text-transform: uppercase;
+							-webkit-transform: rotate(270deg);
+						}
+
+						p.large {
+							float: left;
+							font-family: 'LeagueGothicRegular';
+							font-size: 2em;
+							margin: 0;
+							margin-top: -20px;
+							padding: 0;
+							
+							&:first-letter {
+								font-size: 250%;
+							}
+						}
+					}
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+
+			.tabs {
+				position: relative;
+
+				ul {
+					border-bottom: none;
+					margin: 0 auto;
+					overflow: hidden;
+					width: 900px;
+
+					li {
+						width: 900px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
